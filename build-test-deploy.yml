@@ -70,3 +70,13 @@ stages:
             targetType: 'inline'
             script: 'set +x; make build-starboard-cli'
             workingDirectory: '$(System.DefaultWorkingDirectory)'
+        - task: AzureCLI@2
+          displayName: Upload to ASInternal
+          inputs:
+            azureSubscription: ecommplatformsharedresources-prod-group-SPN
+            scriptType: pscore
+            scriptLocation: inlineScript
+            inlineScript: |
+              az devops configure --defaults organization=https://dev.azure.com/itsals project=E_SharedServices_Platform
+              az artifacts universal publish --organization https://dev.azure.com/itsals --feed ASInternal --name starboard \
+                --version $(Build.BuildNumber) --description "AAG Starboard Implementation" --path $(System.DefaultWorkingDirectory)/bin/starboard
