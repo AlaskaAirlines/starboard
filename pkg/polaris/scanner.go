@@ -30,7 +30,7 @@ const (
 )
 
 var (
-	polarisContainerImage = fmt.Sprintf("quay.io/fairwinds/polaris:%s", polarisVersion)
+	polarisContainerImage = fmt.Sprintf("gcr.io/aag-anthos-poc17-app/polaris:%s", polarisVersion)
 )
 
 type Scanner struct {

@@ -8,8 +8,8 @@ GOBIN=$(GOPATH)/bin
 
 SOURCES := $(shell find . -name '*.go')
 
-IMAGE_TAG := dev
-STARBOARD_CLI_IMAGE := aquasec/starboard:$(IMAGE_TAG)
+IMAGE_TAG := PreBaked
+STARBOARD_CLI_IMAGE := gcr.io/aag-anthos-poc17-app/starboard:$(IMAGE_TAG)
 STARBOARD_OPERATOR_IMAGE := aquasec/starboard-operator:$(IMAGE_TAG)
 STARBOARD_SCANNER_AQUA_IMAGE := aquasec/starboard-scanner-aqua:$(IMAGE_TAG)
 

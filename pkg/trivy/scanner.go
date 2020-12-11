@@ -105,37 +105,11 @@ func (s *scanner) getPodSpecForStandaloneMode(spec corev1.PodSpec, credentials m
 		Image:                    s.config.GetTrivyImageRef(),
 		ImagePullPolicy:          corev1.PullIfNotPresent,
 		TerminationMessagePolicy: corev1.TerminationMessageFallbackToLogsOnError,
-		Env: []corev1.EnvVar{
-			{
-				Name: "HTTP_PROXY",
-				ValueFrom: &corev1.EnvVarSource{
-					ConfigMapKeyRef: &corev1.ConfigMapKeySelector{
-						LocalObjectReference: corev1.LocalObjectReference{
-							Name: starboard.ConfigMapName,
-						},
-						Key:      "trivy.httpProxy",
-						Optional: pointer.BoolPtr(true),
-					},
-				},
-			},
-			{
-				Name: "GITHUB_TOKEN",
-				ValueFrom: &corev1.EnvVarSource{
-					ConfigMapKeyRef: &corev1.ConfigMapKeySelector{
-						LocalObjectReference: corev1.LocalObjectReference{
-							Name: starboard.ConfigMapName,
-						},
-						Key:      "trivy.githubToken",
-						Optional: pointer.BoolPtr(true),
-					},
-				},
-			},
-		},
 		Command: []string{
 			"trivy",
 		},
 		Args: []string{
-			"--download-db-only",
+			"--skip-update",
 			"--cache-dir",
 			"/var/lib/trivy",
 		},
