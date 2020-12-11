@@ -80,13 +80,16 @@ stages:
       pool:
         vmImage: 'windows-latest' # Set value in Azure Dev Ops Build Pipeline 
       steps:
-        - task: UniversalPackages@0
-          displayName: Publish Starboard Binary
-          inputs:
-            command: publish
-            publishDirectory: '$(Pipeline.Workspace)/binary'
-            vstsFeedPublish: '5592b7b5-52f0-47e2-93ee-d78656509627'
-            vstsFeedPackagePublish: 'starboard'
-            versionOption: custom
-            versionPublish: '1.$(Build.BuildNumber)'
-            packagePublishDescription: 'AAG Starboard Implementation'            
+        - script: |
+            ls $(Pipeline.Workspace)
+            ls $(Pipeline.Workspace)/binary
+        # - task: UniversalPackages@0
+        #   displayName: Publish Starboard Binary
+        #   inputs:
+        #     command: publish
+        #     publishDirectory: '$(Pipeline.Workspace)/binary/'
+        #     vstsFeedPublish: '5592b7b5-52f0-47e2-93ee-d78656509627'
+        #     vstsFeedPackagePublish: 'starboard'
+        #     versionOption: custom
+        #     versionPublish: '1.$(Build.BuildNumber)'
+        #     packagePublishDescription: 'AAG Starboard Implementation'            
