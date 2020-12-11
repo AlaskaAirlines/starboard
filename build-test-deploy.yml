@@ -1,0 +1,72 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+resources:
+  repositories:
+    - repository: self
+    - repository: templates
+      type: git
+      name: SoftwareTransformation/DevOps
+      ref: refs/heads/master
+
+variables:
+- group: PipelineVariables
+- group: Platform_Prod_Secrets
+- name: SonarQubeExtraProps
+  value: |  
+    sonar.sources=.
+    sonar.exclusions=**/*_test.go,**/deployment/**
+    sonar.tests=.
+    sonar.test.inclusions=**/*_test.go
+    sonar.test.exclusions=**/deployment/**
+    sonar.go.coverage.reportPaths=**/coverage.out
+
+stages:
+- stage: PrepForBuild
+  displayName: 'Create Artifact for all the resources'
+  jobs:
+    - job: PrepforBuild
+      pool: 
+        vmImage: 'ubuntu-latest'
+      steps:
+      - publish: $(Build.SourcesDirectory)
+        artifact: Prepped
+        displayName: 'Uploading Prepped Sources' 
+      
+- stage: BuildAndPublish
+  jobs:
+    - job: BuildAndPush
+      steps:
+        # SonarQube Prepare CLI Task  
+        - template: YAML/Builds/Security/SonarQubePrepareCLI.yml@templates  # Template reference
+          parameters:
+            ProjectKey: 'ecomm_platform-starboard' 
+            ProjectName: 'ecomm_platform-starboard' 
+            Scannedsources: '.' 
+            ExtraProperties: '$(SonarQubeExtraProps)' 
+        - task: Bash@3
+          displayName: 'Run Style Checker'
+          inputs:
+            targetType: 'inline'
+            script: 'set +x; go get -v -u golang.org/x/lint/golint; GOPATH=/home/vsts/go make lint'
+            workingDirectory: '$(System.DefaultWorkingDirectory)'
+        - task: Bash@3
+          displayName: 'Run Unit Tests'
+          inputs:
+            targetType: 'inline'
+            script: 'set +x; make unit-tests'
+            workingDirectory: '$(System.DefaultWorkingDirectory)'
+        # SonarQube SonarQubeAnalyzeAndPublish Task
+        - template: YAML/Builds/Security/SonarQubeAnalyzeAndPublish.yml@templates 
+          parameters:
+            ProjectKey: 'ecomm_platform-starboard' 
+            ProjectName: 'ecomm_platform-starboard'
+        - task: Bash@3  
+          displayName: 'Compile Binary'
+          inputs:
+            targetType: 'inline'
+            script: 'set +x; make build-starboard-cli'
+            workingDirectory: '$(System.DefaultWorkingDirectory)'

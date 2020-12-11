@@ -7,7 +7,7 @@ GOPATH=$(shell go env GOPATH)
 GOBIN=$(GOPATH)/bin
 
 SOURCES := $(shell find . -name '*.go')
-
+SYSTEM_DEFAULTWORKINGDIRECTORY := $(shell echo "${SYSTEM_DEFAULTWORKINGDIRECTORY}")
 IMAGE_TAG := PreBaked
 STARBOARD_CLI_IMAGE := gcr.io/aag-anthos-poc17-app/starboard:$(IMAGE_TAG)
 STARBOARD_OPERATOR_IMAGE := aquasec/starboard-operator:$(IMAGE_TAG)
@@ -21,15 +21,15 @@ build: build-starboard-cli build-starboard-operator build-starboard-scanner-aqua
 
 ## Builds the starboard binary
 build-starboard-cli: $(SOURCES)
-	CGO_ENABLED=0 go build -o ./bin/starboard ./cmd/starboard/main.go
+	CGO_ENABLED=0 go build -o ${SYSTEM_DEFAULTWORKINGDIRECTORY}/bin/starboard ${SYSTEM_DEFAULTWORKINGDIRECTORY}/cmd/starboard/main.go
 
 ## Builds the starboard-operator binary
 build-starboard-operator: $(SOURCES)
-	CGO_ENABLED=0 GOOS=linux go build -o ./bin/starboard-operator ./cmd/starboard-operator/main.go
+	CGO_ENABLED=0 GOOS=linux go build -o ${SYSTEM_DEFAULTWORKINGDIRECTORY}/bin/starboard-operator ${SYSTEM_DEFAULTWORKINGDIRECTORY}/cmd/starboard-operator/main.go
 
 ## Builds the scanner-aqua binary
 build-starboard-scanner-aqua: $(SOURCES)
-	CGO_ENABLED=0 GOOS=linux go build -o ./bin/starboard-scanner-aqua ./cmd/scanner-aqua/main.go
+	CGO_ENABLED=0 GOOS=linux go build -o ${SYSTEM_DEFAULTWORKINGDIRECTORY}/bin/starboard-scanner-aqua ${SYSTEM_DEFAULTWORKINGDIRECTORY}/cmd/scanner-aqua/main.go
 
 .PHONY: get-ginkgo
 ## Installs Ginkgo CLI
