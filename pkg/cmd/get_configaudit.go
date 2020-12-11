@@ -7,9 +7,9 @@ import (
 
 	"github.com/AlaskaAirlines/starboard/pkg/configauditreport"
 
-	"github.com/AlaskaAirlines/s/starboard/pkg/starboard"
+	"github.com/AlaskaAirlines/starboard/pkg/starboard"
 
-	clientset "github.com/AlaskaAirlines/s/starboard/pkg/generated/clientset/versioned"
+	clientset "github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned"
 	"github.com/spf13/cobra"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 )

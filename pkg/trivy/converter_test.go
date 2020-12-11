@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/AlaskaAirlines/s/starboard/pkg/starboard"
-	"github.com/AlaskaAirlines/s/starboard/pkg/trivy"
 	"github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
+	"github.com/AlaskaAirlines/starboard/pkg/starboard"
+	"github.com/AlaskaAirlines/starboard/pkg/trivy"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

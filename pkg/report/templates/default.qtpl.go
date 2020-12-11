@@ -8,10 +8,10 @@ package templates
 import "github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
 
 //line pkg/report/templates/default.qtpl:2
-import "github.com/AlaskaAirlines/s/starboard/pkg/kube"
+import "github.com/AlaskaAirlines/starboard/pkg/kube"
 
 //line pkg/report/templates/default.qtpl:3
-import "github.com/AlaskaAirlines/s/starboard/pkg/vulnerabilityreport"
+import "github.com/AlaskaAirlines/starboard/pkg/vulnerabilityreport"
 
 //line pkg/report/templates/default.qtpl:6
 import (

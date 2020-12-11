@@ -6,10 +6,10 @@ import (
 
 	"github.com/AlaskaAirlines/starboard/pkg/configauditreport"
 
-	"github.com/AlaskaAirlines/s/starboard/pkg/vulnerabilityreport"
+	"github.com/AlaskaAirlines/starboard/pkg/vulnerabilityreport"
 
-	clientset "github.com/AlaskaAirlines/s/starboard/pkg/generated/clientset/versioned"
-	"github.com/AlaskaAirlines/s/starboard/pkg/report"
+	clientset "github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned"
+	"github.com/AlaskaAirlines/starboard/pkg/report"
 	"github.com/spf13/cobra"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 )

@@ -6,8 +6,8 @@ import (
 
 	"github.com/AlaskaAirlines/s/starboard/pkg/operator"
 	"github.com/AlaskaAirlines/s/starboard/pkg/operator/etc"
-	"github.com/AlaskaAirlines/s/starboard/pkg/starboard"
 	starboardapi "github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned"
+	"github.com/AlaskaAirlines/starboard/pkg/starboard"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"k8s.io/client-go/kubernetes"

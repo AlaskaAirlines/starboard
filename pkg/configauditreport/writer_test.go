@@ -6,10 +6,10 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/AlaskaAirlines/s/starboard/pkg/configauditreport"
-	"github.com/AlaskaAirlines/s/starboard/pkg/generated/clientset/versioned/fake"
-	"github.com/AlaskaAirlines/s/starboard/pkg/kube"
 	"github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
+	"github.com/AlaskaAirlines/starboard/pkg/configauditreport"
+	"github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned/fake"
+	"github.com/AlaskaAirlines/starboard/pkg/kube"
 	"github.com/stretchr/testify/require"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )

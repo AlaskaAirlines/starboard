@@ -3,9 +3,9 @@
 package fake
 
 import (
-	aquasecurityv1alpha1 "github.com/AlaskaAirlines/s/starboard/pkg/generated/clientset/versioned/typed/aquasecurity/v1alpha1"
-	fakeaquasecurityv1alpha1 "github.com/AlaskaAirlines/s/starboard/pkg/generated/clientset/versioned/typed/aquasecurity/v1alpha1/fake"
 	clientset "github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned"
+	aquasecurityv1alpha1 "github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned/typed/aquasecurity/v1alpha1"
+	fakeaquasecurityv1alpha1 "github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned/typed/aquasecurity/v1alpha1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

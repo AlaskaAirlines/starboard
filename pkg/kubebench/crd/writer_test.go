@@ -8,11 +8,11 @@ import (
 
 	"k8s.io/apimachinery/pkg/labels"
 
-	"github.com/AlaskaAirlines/s/starboard/pkg/apis/aquasecurity/v1alpha1"
-	starboardClientset "github.com/AlaskaAirlines/s/starboard/pkg/generated/clientset/versioned"
-	starboardClientsetFake "github.com/AlaskaAirlines/s/starboard/pkg/generated/clientset/versioned/fake"
-	"github.com/AlaskaAirlines/s/starboard/pkg/kube"
-	"github.com/AlaskaAirlines/s/starboard/pkg/kubebench/crd"
+	"github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
+	starboardClientset "github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned"
+	starboardClientsetFake "github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned/fake"
+	"github.com/AlaskaAirlines/starboard/pkg/kube"
+	"github.com/AlaskaAirlines/starboard/pkg/kubebench/crd"
 	. "github.com/onsi/gomega/gstruct"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

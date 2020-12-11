@@ -3,10 +3,10 @@ package cmd
 import (
 	"context"
 
-	starboardapi "github.com/AlaskaAirlines/s/starboard/pkg/generated/clientset/versioned"
-	"github.com/AlaskaAirlines/s/starboard/pkg/polaris"
-	"github.com/AlaskaAirlines/s/starboard/pkg/starboard"
 	"github.com/AlaskaAirlines/starboard/pkg/configauditreport"
+	starboardapi "github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned"
+	"github.com/AlaskaAirlines/starboard/pkg/polaris"
+	"github.com/AlaskaAirlines/starboard/pkg/starboard"
 	"github.com/spf13/cobra"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 	"k8s.io/client-go/kubernetes"

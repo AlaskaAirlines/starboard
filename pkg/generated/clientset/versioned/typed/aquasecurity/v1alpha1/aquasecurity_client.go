@@ -3,8 +3,8 @@
 package v1alpha1
 
 import (
-	"github.com/AlaskaAirlines/s/starboard/pkg/generated/clientset/versioned/scheme"
 	v1alpha1 "github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
+	"github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 

@@ -6,10 +6,10 @@ import (
 	"context"
 	time "time"
 
-	versioned "github.com/AlaskaAirlines/s/starboard/pkg/generated/clientset/versioned"
-	internalinterfaces "github.com/AlaskaAirlines/s/starboard/pkg/generated/informers/externalversions/internalinterfaces"
-	v1alpha1 "github.com/AlaskaAirlines/s/starboard/pkg/generated/listers/aquasecurity/v1alpha1"
 	aquasecurityv1alpha1 "github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
+	versioned "github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned"
+	internalinterfaces "github.com/AlaskaAirlines/starboard/pkg/generated/informers/externalversions/internalinterfaces"
+	v1alpha1 "github.com/AlaskaAirlines/starboard/pkg/generated/listers/aquasecurity/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"

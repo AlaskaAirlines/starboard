@@ -8,12 +8,12 @@ import (
 
 	"github.com/AlaskaAirlines/starboard/pkg/configauditreport"
 
-	"github.com/AlaskaAirlines/s/starboard/pkg/vulnerabilityreport"
+	"github.com/AlaskaAirlines/starboard/pkg/vulnerabilityreport"
 
-	"github.com/AlaskaAirlines/s/starboard/pkg/apis/aquasecurity/v1alpha1"
+	"github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
 
-	"github.com/AlaskaAirlines/s/starboard/pkg/kube"
-	"github.com/AlaskaAirlines/s/starboard/pkg/report/templates"
+	"github.com/AlaskaAirlines/starboard/pkg/kube"
+	"github.com/AlaskaAirlines/starboard/pkg/report/templates"
 )
 
 type htmlReporter struct {

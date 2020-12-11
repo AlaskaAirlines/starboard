@@ -9,10 +9,10 @@ import (
 
 	"github.com/AlaskaAirlines/starboard/pkg/kube"
 
-	"github.com/AlaskaAirlines/s/starboard/pkg/kubehunter"
+	"github.com/AlaskaAirlines/starboard/pkg/kubehunter"
 
-	starboard "github.com/AlaskaAirlines/s/starboard/pkg/apis/aquasecurity/v1alpha1"
-	starboardapi "github.com/AlaskaAirlines/s/starboard/pkg/generated/clientset/versioned"
+	starboard "github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
+	starboardapi "github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned"
 	meta "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 

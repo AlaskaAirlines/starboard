@@ -9,8 +9,8 @@ import (
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/klog"
 
-	starboard "github.com/AlaskaAirlines/s/starboard/pkg/apis/aquasecurity/v1alpha1"
-	"github.com/AlaskaAirlines/s/starboard/pkg/kube"
+	starboard "github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
+	"github.com/AlaskaAirlines/starboard/pkg/kube"
 )
 
 // Write is the interface that wraps basic methods for persisting ConfigAudit reports.

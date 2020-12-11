@@ -3,8 +3,8 @@ package api
 import (
 	"strings"
 
-	"github.com/AlaskaAirlines/s/starboard/pkg/operator/aqua/client"
 	"github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
+	"github.com/AlaskaAirlines/starboard/pkg/operator/aqua/client"
 	"github.com/google/go-containerregistry/pkg/name"
 )
 

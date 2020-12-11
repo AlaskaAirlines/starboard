@@ -8,9 +8,9 @@ import (
 
 	"k8s.io/apimachinery/pkg/types"
 
-	"github.com/AlaskaAirlines/s/starboard/pkg/resources"
+	"github.com/AlaskaAirlines/starboard/pkg/resources"
 
-	"github.com/AlaskaAirlines/s/starboard/pkg/operator/etc"
+	"github.com/AlaskaAirlines/starboard/pkg/operator/etc"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	ctrl "sigs.k8s.io/controller-runtime"
