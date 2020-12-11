@@ -18,7 +18,7 @@ variables:
 - name: SonarQubeExtraProps
   value: |  
     sonar.sources=.
-    sonar.exclusions=**/*_test.go,**/deployment/**
+    sonar.exclusions=**/*_test.go,**/deployment/**,**/templates/**
     sonar.tests=.
     sonar.test.inclusions=**/*_test.go
     sonar.test.exclusions=**/deployment/**
@@ -41,12 +41,12 @@ stages:
     - job: BuildAndPush
       steps:
         # SonarQube Prepare CLI Task  
-        - template: YAML/Builds/Security/SonarQubePrepareCLI.yml@templates  # Template reference
-          parameters:
-            ProjectKey: 'ecomm_platform-starboard' 
-            ProjectName: 'ecomm_platform-starboard' 
-            Scannedsources: '.' 
-            ExtraProperties: '$(SonarQubeExtraProps)' 
+        # - template: YAML/Builds/Security/SonarQubePrepareCLI.yml@templates  # Template reference
+        #   parameters:
+        #     ProjectKey: 'ecomm_platform-starboard' 
+        #     ProjectName: 'ecomm_platform-starboard' 
+        #     Scannedsources: '.' 
+        #     ExtraProperties: '$(SonarQubeExtraProps)' 
         # - task: Bash@3
         #   displayName: 'Run Style Checker'
         #   inputs:
@@ -60,10 +60,10 @@ stages:
         #     script: 'set +x; make unit-tests'
         #     workingDirectory: '$(System.DefaultWorkingDirectory)'
         # SonarQube SonarQubeAnalyzeAndPublish Task
-        - template: YAML/Builds/Security/SonarQubeAnalyzeAndPublish.yml@templates 
-          parameters:
-            ProjectKey: 'ecomm_platform-starboard' 
-            ProjectName: 'ecomm_platform-starboard'
+        # - template: YAML/Builds/Security/SonarQubeAnalyzeAndPublish.yml@templates 
+        #   parameters:
+        #     ProjectKey: 'ecomm_platform-starboard' 
+        #     ProjectName: 'ecomm_platform-starboard'
         - task: Bash@3  
           displayName: 'Compile Binary'
           inputs:
@@ -78,5 +78,4 @@ stages:
             scriptLocation: inlineScript
             inlineScript: |
               az devops configure --defaults organization=https://dev.azure.com/itsals project=E_SharedServices_Platform
-              az artifacts universal publish --organization https://dev.azure.com/itsals --feed ASInternal --name starboard \
-                --version $(Build.BuildNumber) --description "AAG Starboard Implementation" --path $(System.DefaultWorkingDirectory)/bin/starboard
+              az artifacts universal publish --organization https://dev.azure.com/itsals --feed ASInternal --name starboard --version $(Build.BuildNumber) --description "AAG Starboard Implementation" --path $(System.DefaultWorkingDirectory)/bin/starboard
