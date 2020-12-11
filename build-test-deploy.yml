@@ -70,7 +70,7 @@ stages:
             targetType: 'inline'
             script: 'set +x; make build-starboard-cli'
             workingDirectory: '$(System.DefaultWorkingDirectory)'
-        - publish: $(Build.SourcesDirectory)
+        - publish: $(Build.SourcesDirectory)/bin
           artifact: binary
           displayName: 'Uploading Starboard Binary'   
     - job: PublishToArtifactFeed
