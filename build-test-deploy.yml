@@ -65,16 +65,26 @@ stages:
         #     ProjectKey: 'ecomm_platform-starboard' 
         #     ProjectName: 'ecomm_platform-starboard'
         - task: Bash@3  
-          displayName: 'Compile Binary'
+          displayName: 'Compile Starboard Binary'
           inputs:
             targetType: 'inline'
             script: 'set +x; make build-starboard-cli'
             workingDirectory: '$(System.DefaultWorkingDirectory)'
+        - publish: $(Build.SourcesDirectory)
+          artifact: binary
+          displayName: 'Uploading Starboard Binary'   
+    - job: PublishToArtifactFeed
+      condition: succeeded()
+      dependsOn: BuildAndPush
+      displayName: Publish Starboard to ASInternal      
+      pool:
+        vmImage: 'windows-latest' # Set value in Azure Dev Ops Build Pipeline 
+      steps:
         - task: UniversalPackages@0
           displayName: Publish Starboard Binary
           inputs:
             command: publish
-            publishDirectory: '$(System.DefaultWorkingDirectory)/bin/starboard'
+            publishDirectory: '$(Pipeline.Workspace)/binary'
             vstsFeedPublish: 'E_SharedServices_Platform/ASInternal'
             vstsFeedPackagePublish: 'starboard'
             versionOption: custom
