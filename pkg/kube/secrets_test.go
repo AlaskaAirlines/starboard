@@ -3,8 +3,8 @@ package kube_test
 import (
 	"testing"
 
-	"github.com/aquasecurity/starboard/pkg/docker"
-	"github.com/aquasecurity/starboard/pkg/kube"
+	"github.com/AlaskaAirlines/s/starboard/pkg/kube"
+	"github.com/AlaskaAirlines/starboard/pkg/docker"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	. "github.com/onsi/gomega/gstruct"

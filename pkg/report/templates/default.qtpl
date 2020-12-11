@@ -1,6 +1,6 @@
-{% import "github.com/aquasecurity/starboard/pkg/apis/aquasecurity/v1alpha1" %}
-{% import "github.com/aquasecurity/starboard/pkg/kube" %}
-{% import "github.com/aquasecurity/starboard/pkg/vulnerabilityreport" %}
+{% import "github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1" %}
+{% import "github.com/AlaskaAirlines/starboard/pkg/kube" %}
+{% import "github.com/AlaskaAirlines/starboard/pkg/vulnerabilityreport" %}
 
 
 {% code

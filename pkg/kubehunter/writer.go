@@ -3,7 +3,7 @@ package kubehunter
 import (
 	"context"
 
-	starboard "github.com/aquasecurity/starboard/pkg/apis/aquasecurity/v1alpha1"
+	starboard "github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
 )
 
 type Writer interface {

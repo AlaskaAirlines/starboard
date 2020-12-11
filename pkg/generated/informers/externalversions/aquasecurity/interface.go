@@ -3,8 +3,8 @@
 package aquasecurity
 
 import (
-	v1alpha1 "github.com/aquasecurity/starboard/pkg/generated/informers/externalversions/aquasecurity/v1alpha1"
-	internalinterfaces "github.com/aquasecurity/starboard/pkg/generated/informers/externalversions/internalinterfaces"
+	internalinterfaces "github.com/AlaskaAirlines/s/starboard/pkg/generated/informers/externalversions/internalinterfaces"
+	v1alpha1 "github.com/AlaskaAirlines/starboard/pkg/generated/informers/externalversions/aquasecurity/v1alpha1"
 )
 
 // Interface provides access to each of this group's versions.

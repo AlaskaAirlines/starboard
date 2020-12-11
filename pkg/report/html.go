@@ -6,14 +6,14 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/aquasecurity/starboard/pkg/configauditreport"
+	"github.com/AlaskaAirlines/starboard/pkg/configauditreport"
 
-	"github.com/aquasecurity/starboard/pkg/vulnerabilityreport"
+	"github.com/AlaskaAirlines/s/starboard/pkg/vulnerabilityreport"
 
-	"github.com/aquasecurity/starboard/pkg/apis/aquasecurity/v1alpha1"
+	"github.com/AlaskaAirlines/s/starboard/pkg/apis/aquasecurity/v1alpha1"
 
-	"github.com/aquasecurity/starboard/pkg/kube"
-	"github.com/aquasecurity/starboard/pkg/report/templates"
+	"github.com/AlaskaAirlines/s/starboard/pkg/kube"
+	"github.com/AlaskaAirlines/s/starboard/pkg/report/templates"
 )
 
 type htmlReporter struct {

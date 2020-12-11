@@ -7,7 +7,7 @@ import (
 
 	"k8s.io/klog"
 
-	"github.com/aquasecurity/starboard/pkg/kube"
+	"github.com/AlaskaAirlines/starboard/pkg/kube"
 
 	apps "k8s.io/api/apps/v1"
 	batch "k8s.io/api/batch/v1"

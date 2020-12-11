@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/aquasecurity/starboard/pkg/kube"
+	"github.com/AlaskaAirlines/starboard/pkg/kube"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"k8s.io/apimachinery/pkg/labels"

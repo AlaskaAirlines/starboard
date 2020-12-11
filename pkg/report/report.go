@@ -3,7 +3,7 @@ package report
 import (
 	"io"
 
-	"github.com/aquasecurity/starboard/pkg/kube"
+	"github.com/AlaskaAirlines/starboard/pkg/kube"
 )
 
 type Reporter interface {

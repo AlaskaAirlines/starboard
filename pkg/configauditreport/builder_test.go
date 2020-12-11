@@ -3,8 +3,8 @@ package configauditreport_test
 import (
 	"testing"
 
-	"github.com/aquasecurity/starboard/pkg/apis/aquasecurity/v1alpha1"
-	"github.com/aquasecurity/starboard/pkg/configauditreport"
+	"github.com/AlaskaAirlines/s/starboard/pkg/configauditreport"
+	"github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	appsv1 "k8s.io/api/apps/v1"

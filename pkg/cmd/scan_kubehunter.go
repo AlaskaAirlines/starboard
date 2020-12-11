@@ -3,11 +3,11 @@ package cmd
 import (
 	"context"
 
-	"github.com/aquasecurity/starboard/pkg/starboard"
+	"github.com/AlaskaAirlines/starboard/pkg/starboard"
 
-	starboardapi "github.com/aquasecurity/starboard/pkg/generated/clientset/versioned"
-	"github.com/aquasecurity/starboard/pkg/kubehunter"
-	"github.com/aquasecurity/starboard/pkg/kubehunter/crd"
+	starboardapi "github.com/AlaskaAirlines/s/starboard/pkg/generated/clientset/versioned"
+	"github.com/AlaskaAirlines/s/starboard/pkg/kubehunter"
+	"github.com/AlaskaAirlines/s/starboard/pkg/kubehunter/crd"
 	"github.com/spf13/cobra"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 	"k8s.io/client-go/kubernetes"

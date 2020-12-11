@@ -1,4 +1,4 @@
-module github.com/aquasecurity/starboard
+module github.com/AlaskaAirlines/starboard
 
 go 1.15
 

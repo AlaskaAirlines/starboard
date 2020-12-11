@@ -7,12 +7,12 @@ import (
 
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 
-	"github.com/aquasecurity/starboard/pkg/kube"
+	"github.com/AlaskaAirlines/starboard/pkg/kube"
 
-	"github.com/aquasecurity/starboard/pkg/kubehunter"
+	"github.com/AlaskaAirlines/s/starboard/pkg/kubehunter"
 
-	starboard "github.com/aquasecurity/starboard/pkg/apis/aquasecurity/v1alpha1"
-	starboardapi "github.com/aquasecurity/starboard/pkg/generated/clientset/versioned"
+	starboard "github.com/AlaskaAirlines/s/starboard/pkg/apis/aquasecurity/v1alpha1"
+	starboardapi "github.com/AlaskaAirlines/s/starboard/pkg/generated/clientset/versioned"
 	meta "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 

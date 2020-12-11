@@ -62,15 +62,15 @@ itests-starboard: check-env get-ginkgo
 	--progress \
 	--v \
 	-coverprofile=coverage.txt \
-	-coverpkg=github.com/aquasecurity/starboard/pkg/cmd,\
-	github.com/aquasecurity/starboard/pkg/kube,\
-	github.com/aquasecurity/starboard/pkg/kube/pod,\
-	github.com/aquasecurity/starboard/pkg/kubebench,\
-	github.com/aquasecurity/starboard/pkg/kubehunter,\
-	github.com/aquasecurity/starboard/pkg/polaris,\
-	github.com/aquasecurity/starboard/pkg/configauditreport,\
-	github.com/aquasecurity/starboard/pkg/trivy,\
-	github.com/aquasecurity/starboard/pkg/vulnerabilityreport \
+	-coverpkg=github.com/AlaskaAirlines/starboard/pkg/cmd,\
+	github.com/AlaskaAirlines/starboard/pkg/kube,\
+	github.com/AlaskaAirlines/starboard/pkg/kube/pod,\
+	github.com/AlaskaAirlines/starboard/pkg/kubebench,\
+	github.com/AlaskaAirlines/starboard/pkg/kubehunter,\
+	github.com/AlaskaAirlines/starboard/pkg/polaris,\
+	github.com/AlaskaAirlines/starboard/pkg/configauditreport,\
+	github.com/AlaskaAirlines/starboard/pkg/trivy,\
+	github.com/AlaskaAirlines/starboard/pkg/vulnerabilityreport \
 	./itest/starboard
 
 .PHONY: itests-starboard-operator
@@ -80,13 +80,13 @@ itests-starboard-operator: check-env get-ginkgo
 	--progress \
 	--v \
 	-coverprofile=coverage.txt \
-	-coverpkg=github.com/aquasecurity/starboard/pkg/operator,\
-	github.com/aquasecurity/starboard/pkg/operator/controller,\
-	github.com/aquasecurity/starboard/pkg/operator/controller/job,\
-	github.com/aquasecurity/starboard/pkg/operator/controller/pod,\
-	github.com/aquasecurity/starboard/pkg/operator/logs,\
-	github.com/aquasecurity/starboard/pkg/trivy,\
-	github.com/aquasecurity/starboard/pkg/vulnerabilityreport \
+	-coverpkg=github.com/AlaskaAirlines/starboard/pkg/operator,\
+	github.com/AlaskaAirlines/starboard/pkg/operator/controller,\
+	github.com/AlaskaAirlines/starboard/pkg/operator/controller/job,\
+	github.com/AlaskaAirlines/starboard/pkg/operator/controller/pod,\
+	github.com/AlaskaAirlines/starboard/pkg/operator/logs,\
+	github.com/AlaskaAirlines/starboard/pkg/trivy,\
+	github.com/AlaskaAirlines/starboard/pkg/vulnerabilityreport \
 	./itest/starboard-operator
 
 check-env:

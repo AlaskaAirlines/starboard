@@ -1,7 +1,7 @@
 package trivy
 
 import (
-	"github.com/aquasecurity/starboard/pkg/apis/aquasecurity/v1alpha1"
+	"github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
 )
 
 type ScanReport struct {

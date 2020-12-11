@@ -3,14 +3,14 @@ package configauditreport
 import (
 	"context"
 
-	clientset "github.com/aquasecurity/starboard/pkg/generated/clientset/versioned"
+	clientset "github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/klog"
 
-	starboard "github.com/aquasecurity/starboard/pkg/apis/aquasecurity/v1alpha1"
-	"github.com/aquasecurity/starboard/pkg/kube"
+	starboard "github.com/AlaskaAirlines/s/starboard/pkg/apis/aquasecurity/v1alpha1"
+	"github.com/AlaskaAirlines/s/starboard/pkg/kube"
 )
 
 // Write is the interface that wraps basic methods for persisting ConfigAudit reports.

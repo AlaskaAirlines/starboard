@@ -7,9 +7,9 @@ import (
 	sync "sync"
 	time "time"
 
-	versioned "github.com/aquasecurity/starboard/pkg/generated/clientset/versioned"
-	aquasecurity "github.com/aquasecurity/starboard/pkg/generated/informers/externalversions/aquasecurity"
-	internalinterfaces "github.com/aquasecurity/starboard/pkg/generated/informers/externalversions/internalinterfaces"
+	aquasecurity "github.com/AlaskaAirlines/s/starboard/pkg/generated/informers/externalversions/aquasecurity"
+	internalinterfaces "github.com/AlaskaAirlines/s/starboard/pkg/generated/informers/externalversions/internalinterfaces"
+	versioned "github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

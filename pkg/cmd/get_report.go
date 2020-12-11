@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/aquasecurity/starboard/pkg/configauditreport"
+	"github.com/AlaskaAirlines/starboard/pkg/configauditreport"
 
-	"github.com/aquasecurity/starboard/pkg/vulnerabilityreport"
+	"github.com/AlaskaAirlines/s/starboard/pkg/vulnerabilityreport"
 
-	clientset "github.com/aquasecurity/starboard/pkg/generated/clientset/versioned"
-	"github.com/aquasecurity/starboard/pkg/report"
+	clientset "github.com/AlaskaAirlines/s/starboard/pkg/generated/clientset/versioned"
+	"github.com/AlaskaAirlines/s/starboard/pkg/report"
 	"github.com/spf13/cobra"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 )

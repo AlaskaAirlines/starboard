@@ -7,7 +7,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/aquasecurity/starboard/pkg/docker"
+	"github.com/AlaskaAirlines/starboard/pkg/docker"
 	. "github.com/onsi/ginkgo/extensions/table"
 	"github.com/stretchr/testify/assert"
 )

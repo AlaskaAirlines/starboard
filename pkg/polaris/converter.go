@@ -7,7 +7,7 @@ import (
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	sec "github.com/aquasecurity/starboard/pkg/apis/aquasecurity/v1alpha1"
+	sec "github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
 )
 
 type Converter interface {

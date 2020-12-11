@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/aquasecurity/starboard/pkg/starboard"
+	"github.com/AlaskaAirlines/starboard/pkg/starboard"
 
 	corev1 "k8s.io/api/core/v1"
 
-	apis "github.com/aquasecurity/starboard/pkg/generated/clientset/versioned"
-	"github.com/aquasecurity/starboard/pkg/kubebench"
-	"github.com/aquasecurity/starboard/pkg/kubebench/crd"
+	apis "github.com/AlaskaAirlines/s/starboard/pkg/generated/clientset/versioned"
+	"github.com/AlaskaAirlines/s/starboard/pkg/kubebench"
+	"github.com/AlaskaAirlines/s/starboard/pkg/kubebench/crd"
 	"github.com/spf13/cobra"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/cli-runtime/pkg/genericclioptions"

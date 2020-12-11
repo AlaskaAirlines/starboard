@@ -4,15 +4,15 @@ import (
 	"context"
 	"testing"
 
-	"github.com/aquasecurity/starboard/pkg/starboard"
+	"github.com/AlaskaAirlines/starboard/pkg/starboard"
 
 	"k8s.io/apimachinery/pkg/labels"
 
-	"github.com/aquasecurity/starboard/pkg/apis/aquasecurity/v1alpha1"
-	starboardClientset "github.com/aquasecurity/starboard/pkg/generated/clientset/versioned"
-	starboardClientsetFake "github.com/aquasecurity/starboard/pkg/generated/clientset/versioned/fake"
-	"github.com/aquasecurity/starboard/pkg/kube"
-	"github.com/aquasecurity/starboard/pkg/kubebench/crd"
+	"github.com/AlaskaAirlines/s/starboard/pkg/apis/aquasecurity/v1alpha1"
+	starboardClientset "github.com/AlaskaAirlines/s/starboard/pkg/generated/clientset/versioned"
+	starboardClientsetFake "github.com/AlaskaAirlines/s/starboard/pkg/generated/clientset/versioned/fake"
+	"github.com/AlaskaAirlines/s/starboard/pkg/kube"
+	"github.com/AlaskaAirlines/s/starboard/pkg/kubebench/crd"
 	. "github.com/onsi/gomega/gstruct"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

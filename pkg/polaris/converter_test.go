@@ -4,9 +4,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/aquasecurity/starboard/pkg/polaris"
+	"github.com/AlaskaAirlines/starboard/pkg/polaris"
 
-	"github.com/aquasecurity/starboard/pkg/apis/aquasecurity/v1alpha1"
+	"github.com/AlaskaAirlines/s/starboard/pkg/apis/aquasecurity/v1alpha1"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
