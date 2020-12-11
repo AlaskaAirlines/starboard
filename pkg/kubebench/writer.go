@@ -5,7 +5,7 @@ import (
 
 	"github.com/AlaskaAirlines/starboard/pkg/kube"
 
-	starboard "github.com/AlaskaAirlines/s/starboard/pkg/apis/aquasecurity/v1alpha1"
+	starboard "github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
 	core "k8s.io/api/core/v1"
 )
 

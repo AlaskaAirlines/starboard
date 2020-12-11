@@ -11,9 +11,9 @@ import (
 
 	"github.com/AlaskaAirlines/starboard/pkg/kubebench"
 
-	"github.com/AlaskaAirlines/s/starboard/pkg/starboard"
+	"github.com/AlaskaAirlines/starboard/pkg/starboard"
 
-	starboardv1alpha1 "github.com/AlaskaAirlines/s/starboard/pkg/apis/aquasecurity/v1alpha1"
+	starboardv1alpha1 "github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

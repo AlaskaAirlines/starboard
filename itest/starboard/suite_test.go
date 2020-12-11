@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	starboardapi "github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned"
-	"github.com/aquasecurity/starboard/pkg/starboard"
+	"github.com/AlaskaAirlines/starboard/pkg/starboard"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	apicorev1 "k8s.io/api/core/v1"
