@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	starboardapi "github.com/aquasecurity/starboard/pkg/generated/clientset/versioned"
+	starboardapi "github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned"
 	"github.com/aquasecurity/starboard/pkg/starboard"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

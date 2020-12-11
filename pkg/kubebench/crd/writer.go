@@ -7,15 +7,15 @@ import (
 
 	"k8s.io/apimachinery/pkg/runtime"
 
-	"github.com/aquasecurity/starboard/pkg/generated/clientset/versioned/typed/aquasecurity/v1alpha1"
+	"github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned/typed/aquasecurity/v1alpha1"
 	"k8s.io/klog"
 
 	"k8s.io/apimachinery/pkg/api/errors"
 
-	"github.com/aquasecurity/starboard/pkg/kube"
+	"github.com/AlaskaAirlines/starboard/pkg/kube"
 
-	starboard "github.com/aquasecurity/starboard/pkg/apis/aquasecurity/v1alpha1"
-	starboardapi "github.com/aquasecurity/starboard/pkg/generated/clientset/versioned"
+	starboard "github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
+	starboardapi "github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )

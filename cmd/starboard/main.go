@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/aquasecurity/starboard/pkg/cmd"
-	"github.com/aquasecurity/starboard/pkg/starboard"
+	"github.com/AlaskaAirlines/starboard/pkg/cmd"
+	"github.com/AlaskaAirlines/starboard/pkg/starboard"
 	"k8s.io/klog"
 
 	// Load all known auth plugins

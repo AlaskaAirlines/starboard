@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/aquasecurity/starboard/pkg/kube"
-	"github.com/aquasecurity/starboard/pkg/operator/etc"
-	"github.com/aquasecurity/starboard/pkg/vulnerabilityreport"
+	"github.com/AlaskaAirlines/starboard/pkg/kube"
+	"github.com/AlaskaAirlines/starboard/pkg/operator/etc"
+	"github.com/AlaskaAirlines/starboard/pkg/vulnerabilityreport"
 	batchv1 "k8s.io/api/batch/v1"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 )

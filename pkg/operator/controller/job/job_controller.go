@@ -6,12 +6,12 @@ import (
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	"github.com/aquasecurity/starboard/pkg/operator/controller"
+	"github.com/AlaskaAirlines/starboard/pkg/operator/controller"
 
-	"github.com/aquasecurity/starboard/pkg/kube"
-	pods "github.com/aquasecurity/starboard/pkg/kube/pod"
-	"github.com/aquasecurity/starboard/pkg/operator/etc"
-	"github.com/aquasecurity/starboard/pkg/resources"
+	"github.com/AlaskaAirlines/starboard/pkg/kube"
+	pods "github.com/AlaskaAirlines/starboard/pkg/kube/pod"
+	"github.com/AlaskaAirlines/starboard/pkg/operator/etc"
+	"github.com/AlaskaAirlines/starboard/pkg/resources"
 	"k8s.io/apimachinery/pkg/api/errors"
 
 	batchv1 "k8s.io/api/batch/v1"
