@@ -88,5 +88,5 @@ stages:
             vstsFeedPublish: '5592b7b5-52f0-47e2-93ee-d78656509627'
             vstsFeedPackagePublish: 'starboard'
             versionOption: custom
-            versionPublish: '$(Build.BuildNumber)'
+            versionPublish: '1.$(Build.BuildNumber)'
             packagePublishDescription: 'AAG Starboard Implementation'            
