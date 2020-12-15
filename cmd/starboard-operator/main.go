@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/aquasecurity/starboard/pkg/operator"
-	"github.com/aquasecurity/starboard/pkg/operator/etc"
-	"github.com/aquasecurity/starboard/pkg/starboard"
+	"github.com/AlaskaAirlines/starboard/pkg/operator"
+	"github.com/AlaskaAirlines/starboard/pkg/operator/etc"
+	"github.com/AlaskaAirlines/starboard/pkg/starboard"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 )

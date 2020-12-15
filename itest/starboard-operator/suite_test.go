@@ -4,9 +4,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/AlaskaAirlines/s/starboard/pkg/operator"
-	"github.com/AlaskaAirlines/s/starboard/pkg/operator/etc"
 	starboardapi "github.com/AlaskaAirlines/starboard/pkg/generated/clientset/versioned"
+	"github.com/AlaskaAirlines/starboard/pkg/operator"
+	"github.com/AlaskaAirlines/starboard/pkg/operator/etc"
 	"github.com/AlaskaAirlines/starboard/pkg/starboard"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
