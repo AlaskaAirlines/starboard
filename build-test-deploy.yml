@@ -54,7 +54,7 @@ stages:
         - script: |
             cd $(Pipeline.Workspace)/Prepped/
             go mod vendor
-            GOPATH="$(go env GOPATH)"
+            export GOPATH="$(go env GOPATH)"
             bash ./hack/verify-codegen.sh
           displayName: Process Starboard CodeGen
         # - task: Bash@3
