@@ -40,13 +40,23 @@ stages:
   jobs:
     - job: BuildAndPush
       steps:
+        - task: GoTool@0
+          inputs:
+            version: '1.15.5' 
+          displayName: Install Go 1.15                
         # SonarQube Prepare CLI Task  
         # - template: YAML/Builds/Security/SonarQubePrepareCLI.yml@templates  # Template reference
         #   parameters:
         #     ProjectKey: 'ecomm_platform-starboard' 
         #     ProjectName: 'ecomm_platform-starboard' 
         #     Scannedsources: '.' 
-        #     ExtraProperties: '$(SonarQubeExtraProps)' 
+        #     ExtraProperties: '$(SonarQubeExtraProps)'
+        - script: |
+            cd $(Pipeline.Workspace)/Prepped/
+            go mod vendor
+            GOPATH="$(go env GOPATH)"
+            bash ./hack/verify-codegen.sh
+          displayName: Process Starboard CodeGen
         # - task: Bash@3
         #   displayName: 'Run Style Checker'
         #   inputs:
