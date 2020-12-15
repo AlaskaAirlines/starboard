@@ -103,7 +103,7 @@ func (s *scanner) getPodSpecForStandaloneMode(spec corev1.PodSpec, credentials m
 	initContainer := corev1.Container{
 		Name:                     s.idGenerator.GenerateID(),
 		Image:                    s.config.GetTrivyImageRef(),
-		ImagePullPolicy:          corev1.PullIfNotPresent,
+		ImagePullPolicy:          corev1.PullAlways,
 		TerminationMessagePolicy: corev1.TerminationMessageFallbackToLogsOnError,
 		Command: []string{
 			"trivy",
@@ -184,7 +184,7 @@ func (s *scanner) getPodSpecForStandaloneMode(spec corev1.PodSpec, credentials m
 		containers = append(containers, corev1.Container{
 			Name:                     c.Name,
 			Image:                    s.config.GetTrivyImageRef(),
-			ImagePullPolicy:          corev1.PullIfNotPresent,
+			ImagePullPolicy:          corev1.PullAlways,
 			TerminationMessagePolicy: corev1.TerminationMessageFallbackToLogsOnError,
 			Env:                      env,
 			Command: []string{
@@ -291,7 +291,7 @@ func (s *scanner) getPodSpecForClientServerMode(spec corev1.PodSpec, credentials
 		containers = append(containers, corev1.Container{
 			Name:                     container.Name,
 			Image:                    s.config.GetTrivyImageRef(),
-			ImagePullPolicy:          corev1.PullIfNotPresent,
+			ImagePullPolicy:          corev1.PullAlways,
 			TerminationMessagePolicy: corev1.TerminationMessageFallbackToLogsOnError,
 			Env:                      env,
 			Command: []string{
