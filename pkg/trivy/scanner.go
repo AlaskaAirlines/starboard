@@ -117,7 +117,7 @@ func (s *scanner) getPodSpecForStandaloneMode(spec corev1.PodSpec, credentials m
 		VolumeMounts: []corev1.VolumeMount{
 			{
 				Name:      sharedVolumeName,
-				MountPath: "/var/lib/trivy",
+				MountPath: "/root/.cache/",
 				ReadOnly:  false,
 			},
 		},
