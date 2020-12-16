@@ -111,7 +111,7 @@ func (s *scanner) getPodSpecForStandaloneMode(spec corev1.PodSpec, credentials m
 		Args: []string{
 			"--skip-update",
 			"--cache-dir",
-			"/var/lib/trivy",
+			"/root/.cache/",
 		},
 		Resources: defaultResourceRequirements,
 		VolumeMounts: []corev1.VolumeMount{
