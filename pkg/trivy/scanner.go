@@ -193,7 +193,7 @@ func (s *scanner) getPodSpecForStandaloneMode(spec corev1.PodSpec, credentials m
 			Args: []string{
 				"--skip-update",
 				"--cache-dir",
-				"/var/lib/trivy",
+				"/root/.cache",
 				"--quiet",
 				"--format",
 				"json",
@@ -204,7 +204,7 @@ func (s *scanner) getPodSpecForStandaloneMode(spec corev1.PodSpec, credentials m
 				{
 					Name:      sharedVolumeName,
 					ReadOnly:  false,
-					MountPath: "/var/lib/trivy",
+					MountPath: "/root/.cache",
 				},
 			},
 		})
