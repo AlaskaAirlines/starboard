@@ -124,7 +124,7 @@ func (s *Scanner) prepareKubeHunterJob() *batchv1.Job {
 						{
 							Name:                     kubeHunterContainerName,
 							Image:                    kubeHunterContainerImage,
-							ImagePullPolicy:          corev1.PullIfNotPresent,
+							ImagePullPolicy:          corev1.PullAlways,
 							TerminationMessagePolicy: corev1.TerminationMessageFallbackToLogsOnError,
 							Command:                  []string{"python", "kube-hunter.py"},
 							Args:                     []string{"--pod", "--report", "json", "--log", "warn"},

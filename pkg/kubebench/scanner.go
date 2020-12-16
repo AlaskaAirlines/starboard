@@ -4,12 +4,12 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
 	"github.com/AlaskaAirlines/starboard/pkg/kube"
 	"github.com/AlaskaAirlines/starboard/pkg/kube/pod"
 	"github.com/AlaskaAirlines/starboard/pkg/runner"
 	"github.com/AlaskaAirlines/starboard/pkg/scanners"
 	"github.com/AlaskaAirlines/starboard/pkg/starboard"
-	"github.com/AlaskaAirlines/starboard/pkg/apis/aquasecurity/v1alpha1"
 	"github.com/google/uuid"
 	batchv1 "k8s.io/api/batch/v1"
 	corev1 "k8s.io/api/core/v1"
@@ -188,7 +188,7 @@ func (s *Scanner) prepareKubeBenchJob(node corev1.Node) *batchv1.Job {
 						{
 							Name:                     kubeBenchContainerName,
 							Image:                    s.config.GetKubeBenchImageRef(),
-							ImagePullPolicy:          corev1.PullIfNotPresent,
+							ImagePullPolicy:          corev1.PullAlways,
 							TerminationMessagePolicy: corev1.TerminationMessageFallbackToLogsOnError,
 							Command:                  []string{"kube-bench", target},
 							Args:                     []string{"--json"},
