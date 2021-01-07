@@ -27,7 +27,7 @@ const (
 )
 
 var (
-	kubeHunterContainerImage = fmt.Sprintf("gcr.io/aag-anthos-poc17-app/kube-hunter:%s", kubeHunterVersion)
+	kubeHunterContainerImage = fmt.Sprintf("gcr.io/aag-anthos-poc18-app/kube-hunter:%s", kubeHunterVersion)
 )
 
 type Scanner struct {
